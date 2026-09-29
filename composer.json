@@ -1,0 +1,53 @@
+{
+    "name": "locio/locio",
+    "description": "Australian address autocomplete, validation and geocoding against G-NAF, for PHP and Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "address validation",
+        "address autocomplete",
+        "australian address lookup",
+        "address geocoding",
+        "g-naf",
+        "gnaf api",
+        "laravel address validation",
+        "woocommerce address",
+        "mesh block",
+        "australia"
+    ],
+    "homepage": "https://locio.com.au",
+    "support": {
+        "issues": "https://github.com/locio-au/locio-php/issues",
+        "source": "https://github.com/locio-au/locio-php",
+        "docs": "https://locio.com.au/docs/"
+    },
+    "require": {
+        "php": ">=8.2",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "illuminate/config": "^10.0 || ^11.0 || ^12.0",
+        "illuminate/container": "^10.0 || ^11.0 || ^12.0",
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+        "phpunit/phpunit": "^10.5 || ^11.0",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "suggest": {
+        "ext-curl": "For the default transport. Supply your own Transport without it."
+    },
+    "autoload": {
+        "psr-4": { "Locio\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Locio\\Tests\\": "tests/" }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Locio\\Laravel\\LocioServiceProvider"],
+            "aliases": { "Locio": "Locio\\Laravel\\Locio" }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
